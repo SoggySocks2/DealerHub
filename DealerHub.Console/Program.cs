@@ -5,8 +5,8 @@ var dealer2 = new Dealer("XYZ Motors", "Deganwy", "01492 654321");
 
 
 List<Customer> customer = new List<Customer>();
-var customer1 = new Customer("Alan", "Davis", "52", "Penrhyn Bay", "Conwy", "United Kingdom","LL31 8TA", "87938 173827", "01492 827388", "alandavis@gmail.com");
-var customer2 = new Customer("Jessica", "Thomas", "46", "Conwy", "Conwy", "United Kingdom", "LL31 6YA", "837263 827462", "01492 193823", "jessthombis@hotmail.co.uk");
+var customer1 = new Customer("Alan", "Davis", 52, "Penrhyn Bay", "Conwy", "United Kingdom","LL31 8TA", "87938 173827", "01492 827388", "alandavis@gmail.com");
+var customer2 = new Customer("Jessica", "Thomas", 46, "Conwy", "Conwy", "United Kingdom", "LL31 6YA", "837263 827462", "01492 193823", "jessthombis@hotmail.co.uk");
 customer.Add(customer1);
 customer.Add(customer2);
 
