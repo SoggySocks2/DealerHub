@@ -1,4 +1,4 @@
-﻿using DealerHub.Library;
+﻿using DealerHub.Domain;
 
 var dealer1 = new Dealer("ABC Motors", "Llandudno", "01492 123456");
 var dealer2 = new Dealer("XYZ Motors", "Deganwy", "01492 654321");
