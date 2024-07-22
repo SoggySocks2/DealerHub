@@ -27,3 +27,36 @@ public class Dealer
         Telephone = newTelephone;
     }
 }
+
+public class Customer
+{
+    public string FirstName { get; private set; } = string.Empty;
+    public string LastName { get; private set; } = string.Empty;
+    public string Address { get; private set; } = string.Empty;
+    public string Telephone { get; private set; } = string.Empty;
+
+    public Customer(string firstname, string lastname, string address, string telephone)
+    {
+        UpdateName(firstname, lastname);
+        UpdateAddress(address);
+        UpdateTelephone(telephone);
+    }
+
+    private void UpdateName(String newFirstName, String newLastName)
+    {
+        ArgumentNullException.ThrowIfNull(newFirstName);
+        ArgumentNullException.ThrowIfNull(newLastName);
+        FirstName = newFirstName;
+        LastName = newLastName;
+    }
+    private void UpdateAddress(String newAddress)
+    {
+        ArgumentNullException.ThrowIfNull(newAddress);
+        Address = newAddress;
+    }
+    private void UpdateTelephone(String newTelephone)
+    {
+        ArgumentNullException.ThrowIfNull(newTelephone);
+        Telephone = newTelephone;
+    }
+}
