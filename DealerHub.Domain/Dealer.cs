@@ -2,35 +2,31 @@
 public class Dealer
 {
     public string Name { get; private set; } = string.Empty;
-    public string Address { get; private set; } = string.Empty;
-    public string PostCode { get; private set; } = string.Empty;
-    public string Telephone { get; private set; } = string.Empty;
-
-    public Dealer(string name, string address, string postCode, string telephone)
+    public Address Address;
+    public ContactInfo ContactInfo;
+    public Dealer(string name, Address address, ContactInfo contactInfo)
     {
         UpdateName(name);
         UpdateAddress(address);
-        UpdatePostCode(postCode);
-        UpdateTelephone(telephone);
+        UpdateContactInfo(contactInfo);
+
+
     }
     private void UpdateName(string newName)
     {
         ArgumentNullException.ThrowIfNull(newName);
         Name = newName;
     }
-    private void UpdateAddress(string newAddress)
+    private void UpdateAddress(Address newAddress)
     {
         ArgumentNullException.ThrowIfNull(newAddress);
         Address = newAddress;
     }
-    private void UpdatePostCode(string newPostCode)
+
+    private void UpdateContactInfo(ContactInfo newContactInfo)
     {
-        ArgumentNullException.ThrowIfNull(newPostCode);
-        PostCode = newPostCode;
+        ArgumentNullException.ThrowIfNull(newContactInfo);
+        ContactInfo = newContactInfo;
     }
-    private void UpdateTelephone(string newTelephone)
-    {
-        ArgumentNullException.ThrowIfNull(newTelephone);
-        Telephone = newTelephone;
-    }
+
 }
