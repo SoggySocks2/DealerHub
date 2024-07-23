@@ -8,8 +8,26 @@ public class ContactInfo
 
     public ContactInfo(string homeTelNo, string mobileTelNo, string emailAddress)
     {
-        HomeTelNo = homeTelNo;
-        MobileTelNo = mobileTelNo;
-        EmailAddress = emailAddress;
+        UpdateHomeTelNo(homeTelNo);
+        UpdateMobileTelNo(mobileTelNo);
+        UpdateEmailAddress(emailAddress);
+    }
+
+    private void UpdateHomeTelNo(string newHomeTelNo)
+    {
+        ArgumentNullException.ThrowIfNull(newHomeTelNo);
+        HomeTelNo = newHomeTelNo;
+    }
+
+    private void UpdateMobileTelNo(string newMobileTelNo)
+    {
+        ArgumentNullException.ThrowIfNull(newMobileTelNo);
+        MobileTelNo = newMobileTelNo;
+    }
+
+    private void UpdateEmailAddress(string newEmailAddress)
+    {
+        ArgumentNullException.ThrowIfNull(newEmailAddress);
+        EmailAddress = newEmailAddress;
     }
 }

@@ -7,8 +7,27 @@ public class Person
 
     public Person(string firstName, string lastName, int age)
     {
-        FirstName = firstName;
-        LastName = lastName;
-        Age = age;  
+        UpdateFirstName(firstName);
+        UpdateLastName(lastName);
+        UpdateAge(age);
     }
+
+    private void UpdateFirstName(string newFirstName)
+    {
+        ArgumentNullException.ThrowIfNull(newFirstName);
+        FirstName = newFirstName;
+    }
+
+    private void UpdateLastName(string newLastName)
+    {
+        ArgumentNullException.ThrowIfNull(newLastName);
+        LastName = newLastName;
+    }
+
+    private void UpdateAge(int newAge)
+    {
+        ArgumentNullException.ThrowIfNull(newAge);
+        Age = newAge;
+    }
+
 }
