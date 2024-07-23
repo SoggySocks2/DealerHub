@@ -32,6 +32,12 @@ var person3_contactInfo = new ContactInfo("846972 158586", "01492 958685", "bill
 var customer3 = new Customer(person3, person3_address, person3_contactInfo);
 customer.Add(customer3);
 
+var person4 = new Person("Hank", "Tulips", new DateTime(1985, 11, 16));
+var person4_address = new Address("LLandudno", "Conwy", "United Kingdom", "LL30 8TZ");
+var person4_contactInfo = new ContactInfo("958465 845896", "01492 748596", "hank1923@gmail.com");
+var customer4 = new Customer(person4, person4_address, person4_contactInfo);
+customer.Add(customer4);
+
 
 for (int i = 0; i < dealer.Count; i++)
 {
@@ -66,18 +72,18 @@ for (int i = 0; i < customer.Count; i++)
     }
     else
     {
-        Console.WriteLine($"************************************************");
+        Console.WriteLine($"    *****************************************");
         if (elem.Person.Age < 18)
         {
-            Console.WriteLine($"Customer {i + 1} is underage!");
+            Console.WriteLine($"    Customer {i + 1} is underage!");
         }
         else
         {
-            Console.WriteLine($"Customer {i + 1} is too old!");
+            Console.WriteLine($"    Customer {i + 1} is too old!");
 
         }
-        Console.WriteLine($"{elem.Person.FirstName} {elem.Person.LastName} ({elem.Person.Age} years old)");
-        Console.WriteLine($"************************************************");
+        Console.WriteLine($"    {elem.Person.FirstName} {elem.Person.LastName} ({elem.Person.Age} years old)");
+        Console.WriteLine($"    *****************************************");
         Console.WriteLine();
 
     }
