@@ -1,6 +1,7 @@
 ﻿namespace DealerHub.Domain;
 public class Dealer
 {
+    public Guid Id { get; private set; } = Guid.Empty;
     public string Name { get; private set; } = string.Empty;
     public string Address { get; private set; } = string.Empty;
     public string PostCode { get; private set; } = string.Empty;

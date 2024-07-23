@@ -5,7 +5,9 @@ VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DealerHub.Console", "DealerHub.Console\DealerHub.Console.csproj", "{64EF349C-708A-48FD-B52C-99EBDE009BD7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DealerHub.Domain", "DealerHub.Domain\DealerHub.Domain.csproj", "{3A792239-7394-4C19-AA6B-DA00C1C2D8B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DealerHub.Domain", "DealerHub.Domain\DealerHub.Domain.csproj", "{3A792239-7394-4C19-AA6B-DA00C1C2D8B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DealerHub.Infrastructure", "DealerHub.Infrastructure\DealerHub.Infrastructure.csproj", "{12075D76-FCA4-469F-B3D0-6315919A5CFE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{3A792239-7394-4C19-AA6B-DA00C1C2D8B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A792239-7394-4C19-AA6B-DA00C1C2D8B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A792239-7394-4C19-AA6B-DA00C1C2D8B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12075D76-FCA4-469F-B3D0-6315919A5CFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12075D76-FCA4-469F-B3D0-6315919A5CFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12075D76-FCA4-469F-B3D0-6315919A5CFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12075D76-FCA4-469F-B3D0-6315919A5CFE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
