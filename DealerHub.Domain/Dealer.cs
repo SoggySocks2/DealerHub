@@ -1,32 +1,31 @@
 ﻿namespace DealerHub.Domain;
 public class Dealer
 {
+    public Guid Id { get; private set; } = Guid.Empty;
     public string Name { get; private set; } = string.Empty;
-    public Address Address;
-    public ContactInfo ContactInfo;
+    public Address Address { get; private set; } = default!;
+    public ContactInfo ContactInfo { get; private set; } = default!;
+
+    private Dealer() { } /* Required by Entity Framework */
     public Dealer(string name, Address address, ContactInfo contactInfo)
     {
         UpdateName(name);
         UpdateAddress(address);
         UpdateContactInfo(contactInfo);
-
-
     }
-    private void UpdateName(string newName)
+    public void UpdateName(string newName)
     {
         ArgumentNullException.ThrowIfNull(newName);
         Name = newName;
     }
-    private void UpdateAddress(Address newAddress)
+    public void UpdateAddress(Address newAddress)
     {
         ArgumentNullException.ThrowIfNull(newAddress);
         Address = newAddress;
     }
-
-    private void UpdateContactInfo(ContactInfo newContactInfo)
+    public void UpdateContactInfo(ContactInfo newContactInfo)
     {
         ArgumentNullException.ThrowIfNull(newContactInfo);
         ContactInfo = newContactInfo;
     }
-
 }

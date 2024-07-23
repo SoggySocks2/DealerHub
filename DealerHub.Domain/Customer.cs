@@ -1,29 +1,29 @@
 ﻿namespace DealerHub.Domain;
 public class Customer
 {
-    public Person Person;
-    public Address Address;
-    public ContactInfo ContactInfo;
+    public Person Person { get; private set; } = default!;
+    public Address Address { get; private set; } = default!;
+    public ContactInfo ContactInfo { get; private set; } = default!;
 
-
+    private Customer() { } /* Required by Entity Framework */
     public Customer(Person person, Address address, ContactInfo contactInfo)
     {
         UpdatePerson(person);
         UpdateAddress(address);
         UpdateContactInfo(contactInfo);
     }
-    private void UpdatePerson(Person newPerson)
+    public void UpdatePerson(Person newPerson)
     {
         ArgumentNullException.ThrowIfNull(newPerson);
         Person = newPerson;
     }
 
-    private void UpdateAddress(Address newAddress)
+    public void UpdateAddress(Address newAddress)
     {
         ArgumentNullException.ThrowIfNull(newAddress);
         Address = newAddress;
     }
-    private void UpdateContactInfo(ContactInfo newContactInfo)
+    public void UpdateContactInfo(ContactInfo newContactInfo)
     {
         ArgumentNullException.ThrowIfNull(newContactInfo);
         ContactInfo = newContactInfo;
