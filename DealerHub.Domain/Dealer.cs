@@ -9,6 +9,8 @@ public class Dealer
         UpdateName(name);
         UpdateAddress(address);
         UpdateContactInfo(contactInfo);
+
+
     }
     private void UpdateName(string newName)
     {
@@ -26,4 +28,5 @@ public class Dealer
         ArgumentNullException.ThrowIfNull(newContactInfo);
         ContactInfo = newContactInfo;
     }
+
 }
