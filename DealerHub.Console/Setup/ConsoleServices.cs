@@ -1,4 +1,5 @@
-﻿using DealerHub.Infrastructure.ConfigurationSettings;
+﻿using DealerHub.Console.Dealers;
+using DealerHub.Infrastructure.ConfigurationSettings;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -11,6 +12,6 @@ public static class ConsoleServices
     }
     public static void AddConsoleServices(this IServiceCollection services)
     {
-        //services.AddScoped<IDealerRepository, DealerRepository>();
+        services.AddScoped<IDealerService, DealerService>();
     }
 }
