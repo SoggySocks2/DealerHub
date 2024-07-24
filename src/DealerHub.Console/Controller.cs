@@ -51,7 +51,6 @@ public class Controller
         var customer4 = new Customer(person4, person4_address, person4_contactInfo);
         customer.Add(customer4);
 
-
         for (int i = 0; i < dealer.Count; i++)
         {
 
