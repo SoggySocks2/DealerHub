@@ -1,4 +1,6 @@
-﻿using FluentAssertions;
+﻿using DealerHub.Shared.Tests.Dealers;
+using DealerHub.Shared.Tests.Shared;
+using FluentAssertions;
 
 namespace DealerHub.Domain.Tests.UnitTests;
 public class DealerTests
@@ -7,27 +9,23 @@ public class DealerTests
     public void UpdateName_WhenValid_SetsName()
     {
         //Arrange
-        var originalName = "Ben Jones";
-        var newName = "Benjamin Jones";
-        var address = new Address("84", "Driftwood Avenue", "Tadcaster", "TD1 9YS");
-        var contactInfo = new ContactInfo("01234 567890", "07920 111222", "test@email.com");
+        var dealer = new DealerBuilder().Build();
 
-        var dealer = new Dealer(originalName, address, contactInfo);
+        //Act
+        var newName = "Benjamin Jones";
         dealer.UpdateName(newName);
 
+        //Assert
         dealer.Name.Should().Be(newName);
     }
     [Fact]
     public void UpdateAddress_WhenValid_SetsAddress()
     {
-        //Arrange
-        var name = "Ben Jones";
-        var originalAddress = new Address("84", "Driftwood Avenue", "Tadcaster", "TD1 9YS");
-        var newAddress = new Address("57", "Caroline Road", "Southampton", "ST6 4WS");
-        var contactInfo = new ContactInfo("01234 567890", "07920 111222", "test@email.com");
+        //Arrange        
+        var dealer = new DealerBuilder().Build();
 
         //Act
-        var dealer = new Dealer(name, originalAddress, contactInfo);
+        var newAddress = new AddressBuilder() { AddressLine1 = "57", AddressLine2 = "Caroline Road", AddressLine3 = "Southampton", PostCode = "ST6 4WS" }.Build();
         dealer.UpdateAddress(newAddress);
 
         //Assert
@@ -40,13 +38,10 @@ public class DealerTests
     public void UpdateContactInfo_WhenValid_SetsContactInfo()
     {
         //Arrange
-        var name = "Ben Jones";
-        var address = new Address("84", "Driftwood Avenue", "Tadcaster", "TD1 9YS");
-        var originalContactInfo = new ContactInfo("01234 567890", "07920 111222", "test@email.com");
-        var newContactInfo = new ContactInfo("08761 234521", "05721 765286", "test.user@test.com");
+        var dealer = new DealerBuilder().Build();
 
         //Act
-        var dealer = new Dealer(name, address, originalContactInfo);
+        var newContactInfo = new ContactInfo("08761 234521", "05721 765286", "test.user@test.com");
         dealer.UpdateContactInfo(newContactInfo);
 
         //Assert
@@ -59,11 +54,9 @@ public class DealerTests
     {
         //Arrange
         var name = "Ben Jones";
-        var address = new Address("84", "Driftwood Avenue", "Tadcaster", "TD1 9YS");
-        var contactInfo = new ContactInfo("01234 567890", "07920 111222", "test@email.com");
 
         //Act
-        var dealer = new Dealer(name, address, contactInfo);
+        var dealer = new DealerBuilder() { Name = name }.Build();
 
         //Assert
         dealer.Name.Should().Be(name);
@@ -72,8 +65,8 @@ public class DealerTests
     public void Constructor_WhenNameIsNull_Throws()
     {
         //Arrange
-        var address = new Address("84", "Driftwood Avenue", "Tadcaster", "TD1 9YS");
-        var contactInfo = new ContactInfo("01234 567890", "07920 111222", "test@email.com");
+        var address = new AddressBuilder().Build();
+        var contactInfo = new ContactInfoBuilder().Build();
 
         //Act
         var act = () => new Dealer(null!, address, contactInfo);
@@ -86,7 +79,7 @@ public class DealerTests
     {
         //Arrange
         var name = "Ben Jones";
-        var contactInfo = new ContactInfo("01234 567890", "07920 111222", "test@email.com");
+        var contactInfo = new ContactInfoBuilder().Build();
 
         //Act
         var act = () => new Dealer(name, null!, contactInfo);
@@ -99,7 +92,7 @@ public class DealerTests
     {
         //Arrange
         var name = "Ben Jones";
-        var address = new Address("84", "Driftwood Avenue", "Tadcaster", "TD1 9YS");
+        var address = new AddressBuilder().Build();
 
         //Act
         var act = () => new Dealer(name, address, null!);
