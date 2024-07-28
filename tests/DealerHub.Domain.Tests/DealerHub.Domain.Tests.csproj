@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\DealerHub.Domain\DealerHub.Domain.csproj" />
+    <ProjectReference Include="..\DealerHub.Shared.Tests\DealerHub.Shared.Tests.csproj" />
   </ItemGroup>
 
   <ItemGroup>

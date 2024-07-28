@@ -1,4 +1,5 @@
 ﻿namespace DealerHub.Domain;
+
 public class Dealer
 {
     public Guid Id { get; private set; } = Guid.Empty;
