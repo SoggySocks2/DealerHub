@@ -69,7 +69,7 @@ public class DealerTests
         var contactInfo = new ContactInfoBuilder().Build();
 
         //Act
-        var act = () => new Dealer(null!, address, contactInfo);
+        var act = () => new Dealer(default!, address, contactInfo);
 
         //Assert
         act.Should().Throw<ArgumentNullException>();
@@ -82,7 +82,7 @@ public class DealerTests
         var contactInfo = new ContactInfoBuilder().Build();
 
         //Act
-        var act = () => new Dealer(name, null!, contactInfo);
+        var act = () => new Dealer(name, default!, contactInfo);
 
         //Assert
         act.Should().Throw<ArgumentNullException>();
@@ -95,7 +95,7 @@ public class DealerTests
         var address = new AddressBuilder().Build();
 
         //Act
-        var act = () => new Dealer(name, address, null!);
+        var act = () => new Dealer(name, address, default!);
 
         //Assert
         act.Should().Throw<ArgumentNullException>();
