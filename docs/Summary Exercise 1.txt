@@ -1,4 +1,4 @@
-The solution we have created consists of 3 meain folders:
+The solution we have created consists of 3 main folders:
 
 	1. docs:	Contains the documentation of the project.
 	2. src:		Contains the source code of the project.
@@ -19,21 +19,25 @@ The test folder is divided into 2 subfolders:
 Using what you've learnt so far, please answers the below questions
 
 Question 1. Both Customer and Dealer have an address so we created an Address class to represent this. If we wanted to check AddressLine1 had a value at least 10 characters long, where would you add that logic?
-
+	** Address.cs, in it's corresponding update method
 
 
 Question 2. All classes take a set of variables in their constructors. We then pass them into the appropriate UpdateXXX methods. 
 			For example, the Dealer class takes a name in the constructor and then passes it to the UpdateName method. What is the benefit of this approach?
+	** Ensures that the variables already had realistic values before hand, null values might error
 
 
 
 Question 3: We have added unit tests for the Dealer and Customer classes. What is the purpose of these tests?
+	** To ensure that information is being transfered/updated correctly
 
 
 Question 4: If we were to add a check that AddressLine1 had a value at least 10 characters long, where would you add a unit test for this?
+	** Under it's own method in AddressTests.cs
 
 
 Questino 5: In your own words, briefly describe the solution we have created
+	** A personal information database specifically around Client and Customer details for Car Dealerships.
 
 
 BONUS POINTS (optional but well worth doing):
