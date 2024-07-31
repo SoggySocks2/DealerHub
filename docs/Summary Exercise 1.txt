@@ -1,0 +1,41 @@
+The solution we have created consists of 3 meain folders:
+
+	1. docs:	Contains the documentation of the project.
+	2. src:		Contains the source code of the project.
+	3. test:	Contains the test code of the project.
+
+The src folder is divided into 3 subfolders:
+
+	1. DealerHub.Infrastructure:	Contains several classes that are used to interact with the database.
+	2. DealerHub.Domain:			Contains classes that represent the dealer and customer entities.
+	3. DealerHub.Console:			Used as a starting point for the application. This project uses a DealerService class to interact with the database.
+
+The test folder is divided into 2 subfolders:
+
+	1. DealerHub.Domain.Tests:		Contains the unit tests for the entities classes.
+	2. DealerHub.Shared.Tests:		Contains several builder classes to make creating unit tests easier.
+
+
+Using what you've learnt so far, please answers the below questions
+
+Question 1. Both Customer and Dealer have an address so we created an Address class to represent this. If we wanted to check AddressLine1 had a value at least 10 characters long, where would you add that logic?
+
+
+
+Question 2. All classes take a set of variables in their constructors. We then pass them into the appropriate UpdateXXX methods. 
+			For example, the Dealer class takes a name in the constructor and then passes it to the UpdateName method. What is the benefit of this approach?
+
+
+
+Question 3: We have added unit tests for the Dealer and Customer classes. What is the purpose of these tests?
+
+
+Question 4: If we were to add a check that AddressLine1 had a value at least 10 characters long, where would you add a unit test for this?
+
+
+Questino 5: In your own words, briefly describe the solution we have created
+
+
+BONUS POINTS (optional but well worth doing):
+a: Add logic to check the AddressLine1 value is at least 10 characters long. Throw an ArgumentException if it is not.
+b: Add a unit test to test the above logic.
