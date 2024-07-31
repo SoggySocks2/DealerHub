@@ -5,10 +5,11 @@ public record PersonBuilder
 {
     public string FirstName { get; set; } = "Test First Name";
     public string LastName { get; set; } = "Test Last Name";
-    public int Age { get; private set; } = 30;
+
+    public DateTime DateOfBirth { get; set; } = new DateTime(2000,1,1);
 
     public Person Build()
     {
-        return new Person(FirstName, LastName, new DateTime(DateTime.Now.Year - Age, 1, 1));
+        return new Person(FirstName, LastName, DateOfBirth);
     }
 }

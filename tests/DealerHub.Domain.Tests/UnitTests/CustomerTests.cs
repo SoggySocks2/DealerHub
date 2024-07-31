@@ -36,7 +36,7 @@ public class CustomerTests
         var customer = new CustomerBuilder().Build();
 
         //Act
-        var newAddress = new Address("16 Pentywyn Heights", "Deganwy", "Conwy", "LL31 9DT");
+        var newAddress = new Address("11 Alpha Road", "Chelsea", "London", "CH21 2YD");
         customer.UpdateAddress(newAddress);
 
         //Assert
@@ -82,7 +82,7 @@ public class CustomerTests
     public void Constructor_WhenAddressIsProvided_SetsAddress()
     {
         //Arrange
-        Address address = new Address("16 Pentywyn Heights", "Deganwy", "Conwy", "LL31 9DT");
+        Address address = new Address("11 Alpha Road", "Chelsea", "London", "CH21 2YD");
 
         //Act
         var customer = new CustomerBuilder() { Address = address }.Build();
@@ -119,7 +119,7 @@ public class CustomerTests
         var contactInfo = new ContactInfoBuilder().Build();
 
         //Act
-        var act = () => new Customer(null!, address, contactInfo);
+        var act = () => new Customer(default!, address, contactInfo);
 
         //Assert
         act.Should().Throw<ArgumentNullException>();
@@ -132,7 +132,7 @@ public class CustomerTests
         var contactInfo = new ContactInfoBuilder().Build();
 
         //Act
-        var act = () => new Customer(name, null!, contactInfo);
+        var act = () => new Customer(name, default!, contactInfo);
 
         //Assert
         act.Should().Throw<ArgumentNullException>();
@@ -145,7 +145,7 @@ public class CustomerTests
         var address = new AddressBuilder().Build();
 
         //Act
-        var act = () => new Customer(name, address, null!);
+        var act = () => new Customer(name, address, default!);
 
         //Assert
         act.Should().Throw<ArgumentNullException>();
