@@ -17,6 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DealerHub.Domain.Tests", "t
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DealerHub.Shared.Tests", "tests\DealerHub.Shared.Tests\DealerHub.Shared.Tests.csproj", "{CEB51593-37FD-4247-9856-C25F1E915B27}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{71AA41D4-5768-498D-9B1B-1360ED4590B4}"
+	ProjectSection(SolutionItems) = preProject
+		docs\Summary Exercise 1.txt = docs\Summary Exercise 1.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
