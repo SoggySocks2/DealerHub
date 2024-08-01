@@ -17,7 +17,15 @@ public class Address
     public void UpdateAddressLine1(string newAddressLine1)
     {
         ArgumentNullException.ThrowIfNull(newAddressLine1);
-        AddressLine1 = newAddressLine1;
+        if (newAddressLine1.Length > 10)
+        {
+            AddressLine1 = newAddressLine1;
+        }
+        else 
+        {
+            throw new ArgumentException(newAddressLine1);
+        }
+
     }
     public void UpdateAddressLine2(string newAddressLine2)
     {

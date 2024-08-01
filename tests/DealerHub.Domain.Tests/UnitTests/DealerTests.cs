@@ -25,7 +25,7 @@ public class DealerTests
         var dealer = new DealerBuilder().Build();
 
         //Act
-        var newAddress = new AddressBuilder() { AddressLine1 = "57", AddressLine2 = "Caroline Road", AddressLine3 = "Southampton", PostCode = "ST6 4WS" }.Build();
+        var newAddress = new AddressBuilder() { AddressLine1 = "57 Caroline Road", AddressLine2 = "Southampton", AddressLine3 = "England", PostCode = "ST6 4WS" }.Build();
         dealer.UpdateAddress(newAddress);
 
         //Assert
